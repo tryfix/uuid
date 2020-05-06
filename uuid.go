@@ -30,6 +30,9 @@ func Parse(s string) (UUID, error) {
 }
 
 func (u UUID) String() string {
+	if u.uuid == uuid.Nil {
+		return ``
+	}
 	return u.uuid.String()
 }
 
